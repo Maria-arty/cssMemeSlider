@@ -31,13 +31,25 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    flex-shrink: 0;
+    flex-shrink: 0; 
     opacity: 1;
-    transition: opacity 0.5s transform 0.3s ease-in-out;
-}
-.slider__photo.hidden {
-    display: none;
+    transition: opacity 2s ease-in-out; 
+} 
+
+
+.hidden {
+    
+    transition: opacity 2s ease-in-out; 
     opacity: 0;
+    
+} 
+.text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    font-weight: 400;
+    color: rgb(255, 221, 0);
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
 }
 .content-container {
     width: 97%;
@@ -45,4 +57,32 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.control-panel {
+    width: 31.5%;
+    height: 17%;
+    display: flex;
+    justify-content: flex-end;
+}
+.control-button {
+    margin: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    color: rgb(7, 80, 105);
+    border: solid 0.2em rgb(7, 80, 105);
+    background-color: rgb(7, 80, 105);
+    cursor: pointer;
+}
+.control-button.active {
+    border: solid 0.2em rgb(7, 80, 105);
+    background-color: rgb(41, 37, 37); 
+}
+.control-button.active:hover {
+    border-color: snow;
+    background-color: rgb(41, 37, 37);
+}
+.control-button:hover {
+    background-color: snow;
+    border-color: snow;
 }

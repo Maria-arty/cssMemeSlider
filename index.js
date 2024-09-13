@@ -21,23 +21,22 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeSlide(index) {
         sliderPhoto.classList.add('hidden')
         text.classList.add('hidden')
+        
         setTimeout(() => {
             sliderContainer.innerHTML = `
-        <img src="${photos[index]}" alt=photo__${index} class='slider__photo'>
-        `
-        text.innerHTML = texts[index]
-        sliderPhoto.classList.remove('hidden')
-        text.classList.remove('hidden')
+            <img src="${photos[index]}" alt=photo__${index} class='slider__photo hidden'>
+            `
+            text.innerHTML = texts[index]
+            text.classList.add('.hidden')
 
-        buttons.forEach((button, btnindex) => {
-            if(btnindex === index) {
-                button.classList.add('active')
-            } else {
-                button.classList.remove('active')
-            }
-        }, 1000)
-        })
-        
+            sliderPhoto = document.querySelector('.slider__photo')
+            text = document.querySelector('.text')
+            setTimeout(() => {
+                sliderPhoto.classList.remove('hidden')
+                text.classList.remove('hidden')
+            },50)
+        }, 1500)
+                
     }
 
     buttons.forEach((button, index) => {
@@ -46,5 +45,4 @@ document.addEventListener("DOMContentLoaded", function() {
             changeSlide(currentIndex)
         })
     })
-    changeSlide(0)
 })

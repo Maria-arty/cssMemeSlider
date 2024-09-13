@@ -35,6 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 sliderPhoto.classList.remove('hidden')
                 text.classList.remove('hidden')
             },50)
+
+            buttons.forEach((button, btnindex) => {
+                if (btnindex === index) {
+                    button.classList.add('active')
+                } else {
+                    button.classList.remove('active')
+                }
+            })
         }, 1500)
                 
     }

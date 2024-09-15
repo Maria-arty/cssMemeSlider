@@ -17,6 +17,7 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: hidden;
 }
 
 input[type="radio"] {
@@ -39,7 +40,7 @@ input[type="radio"] {
     margin: 3% 1% 5%; 
     width: 100%;
     height: 80%;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .5s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,8 +51,8 @@ input[type="radio"] {
     height: 100%;
     object-fit: cover;
     flex-shrink: 0; 
-    /* opacity: 1;
-    transition: opacity 1s ease;  */
+    opacity: 1;
+    transition: opacity 1s ease;  
 }
 
 input#slide1:checked ~ .slider-container {
@@ -76,18 +77,14 @@ input#slide3:checked ~ .slider-container .slide:nth-of-type(3),
 input#slide4:checked ~ .slider-container .slide:nth-of-type(4) {
     opacity: 1; 
 }
-
 .text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: xx-large;
     font-weight: 400;
     color: rgb(255, 221, 0);
-    /* opacity: 1;
-    transition: opacity 1s ease; */
+    opacity: 1;
+    transition: opacity 1s ease; 
 }
-/* .hidden {
-    opacity: 0;
-} */
 .content-container {
     width: 100%;
     height: 20%;
@@ -96,7 +93,7 @@ input#slide4:checked ~ .slider-container .slide:nth-of-type(4) {
     justify-content: space-between;
 }
 .control-panel {
-    width: fit-content;
+    width:fit-content;
     height: auto;
     display: flex;
     justify-content: flex-end;
@@ -105,9 +102,6 @@ input#slide4:checked ~ .slider-container .slide:nth-of-type(4) {
     width: 4em;
     height: 4em;
     border-radius: 50%;
-    /* color: rgb(7, 80, 105);
-    border: solid 0.2em rgb(7, 80, 105);
-    background-color: rgb(7, 80, 105); */
     background-color: transparent;
     border-style: none;
     cursor: pointer;
@@ -124,6 +118,7 @@ input#slide4:checked ~ .slider-container .slide:nth-of-type(4) {
     background-color: rgb(7, 80, 105);
     cursor: pointer;
 }
+
 input#slide1:checked ~ .slider-container .slide:nth-of-type(1) .control-panel label[for="slide1"] .inner-circle,
 input#slide2:checked ~ .slider-container .slide:nth-of-type(2) .control-panel label[for="slide2"] .inner-circle,
 input#slide3:checked ~ .slider-container .slide:nth-of-type(3) .control-panel label[for="slide3"] .inner-circle,
@@ -149,16 +144,33 @@ input#slide4:checked ~ .slider-container .slide:nth-of-type(4) .control-panel la
 }
 
 @media (max-width:768px) {
+    .slider {
+        height: auto;
+    }
     .slider-container {
-        height: 50%;
+        height: 70%;
+    }
+    .slide {
+        height: 70%;
+    }
+    .slider__photo {
+        width: 100%;
+        height: 300px;
+        object-fit: fill;
+        flex-shrink: 0; 
     }
     .content-container {
+        height: 40%;
         flex-direction: column-reverse;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
     }
     .text-container {
         align-self: flex-start;
         margin-top: 4em;
     }
+    .text {
+        font-size: large;
+    }
+    
 }

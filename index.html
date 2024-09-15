@@ -4,24 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
     <title>MemeSlider</title>
 </head>
 <body>
-    <div class="body-wrapper">
+    <div class="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2"> 
+        <input type="radio" name="slider" id="slide3"> 
+        <input type="radio" name="slider" id="slide4"> 
+
         <div class="slider-container">
-            <img src="assets/sun_photo.jpg" alt="sun_photo" class="slider__photo"> 
-        </div>
-        <div class="content-container">
-            <div class="text-container">
-                <p class="text">Пусть всегда будет солнце!</p> 
+            <div class="slide">
+                <img src="assets/sun_photo.jpg" alt="sun_photo" class="slider__photo"> 
+                <div class="content-container">
+                    <div class="text-container">
+                        <p class="text">Пусть всегда будет солнце!</p> 
+                    </div>
+                    <div class="control-panel">
+                        <label for="slide1" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide2" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide3" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide4" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
-        
-            <div class="control-panel">
-                <button class="control-button active"></button>
-                <button class="control-button"></button>
-                <button class="control-button"></button>
-                <button class="control-button"></button> 
+            <div class="slide">
+                <img src="assets/sky_photo.jpg" alt="sky_photo" class="slider__photo"> 
+                <div class="content-container">
+                    <div class="text-container">
+                        <p class="text">Пусть всегда будет небо!</p> 
+                    </div>
+                    <div class="control-panel">
+                        <label for="slide1" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide2" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide3" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide4" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/mom_photo.jpg" alt="mom_photo" class="slider__photo"> 
+                <div class="content-container">
+                    <div class="text-container">
+                        <p class="text">Пусть всегда будет мама!</p> 
+                    </div>
+                    <div class="control-panel">
+                        <label for="slide1" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide2" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide3" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide4" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/me_photo.jpg" alt="me_photo" class="slider__photo"> 
+                <div class="content-container">
+                    <div class="text-container">
+                        <p class="text">Пусть всегда буду Я!</p> 
+                    </div>
+                    <div class="control-panel">
+                        <label for="slide1" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide2" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide3" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                        <label for="slide4" class="control-button">
+                            <span class="inner-circle"></span>
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
